@@ -31,11 +31,11 @@ void		sdlDestroy(t_snake *snake)
 	SDL_Quit();
 }
 
-//void		sdlRenderClear(t_snake * snake)
-//{
-//	SDL_SetRenderDrawColor(snake->sdl.renderer, 0, 0, 0, 255);
-//	SDL_RenderClear(snake->sdl.renderer);
-//}
+void		sdlRenderClear(t_snake * snake)
+{
+	SDL_SetRenderDrawColor(snake->sdl.renderer, 0, 0, 0, 255);
+	SDL_RenderClear(snake->sdl.renderer);
+}
 
 
 

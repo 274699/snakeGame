@@ -22,11 +22,19 @@ typedef struct		s_sdl
 	SDL_Texture		*message;
 }					t_sdl;
 
+typedef struct		s_pos
+{
+	int				x;
+	int				y;
+}					t_pos;
+
 typedef struct		s_snake
 {
 	t_sdl			sdl;
 	int				stop;
 	int				grid[H][W];
+	t_pos			*body[H * W];
+	
 }					t_snake;
 
 void					sdlInit(t_snake *snake);
@@ -36,5 +44,9 @@ void					introCountDown(t_snake * snake);
 int					snakeCycle(t_snake *snake);
 void					drawGrid(t_snake *snake);
 void					setGrid(t_snake *snake);
+void					sdlRenderClear(t_snake * snake);
+void					reDrawRight(t_snake *snake);
+void					reDrawLeft(t_snake *snake);
+void					setBody(t_snake *snake);
 
 #endif
