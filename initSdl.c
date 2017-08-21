@@ -1,6 +1,17 @@
 
 #include "snake.h"
 
+int		snakeCycle(t_snake *snake)
+{
+	
+	
+	return (1);
+}
+
+
+
+
+
 void		sdlInit(t_snake *snake)
 {
 	SDL_Init(SDL_INIT_EVERYTHING);
