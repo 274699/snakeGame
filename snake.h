@@ -32,6 +32,7 @@ typedef struct		s_snake
 	t_pos			*body[H * W];
 	t_pos			move;
 	t_pos			point;
+	int				pointEated;
 }					t_snake;
 
 void				sdlInit(t_snake *snake);

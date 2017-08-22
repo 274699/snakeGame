@@ -6,9 +6,11 @@ int		main(void)
 	t_snake	*snake;
 	int		stop;
 
+	
 	stop = 0;
 	if (!(snake = (t_snake*)malloc(sizeof(t_snake))))
 		return (0);
+	snake->pointEated = 1;
 	sdlInit(snake);
 	setGrid(snake);
 	setBody(snake);
@@ -39,11 +41,15 @@ int		main(void)
 					snake->move = (t_pos){0, 1, 0};
 			}
 		}
+
+		
 		reDraw(snake);
 		sdlRenderClear(snake);
+		if (snake->grid[snake->body[0]->y][snake->body[0]->x] == 3)
+			snake->pointEated = 1;
 		setGrid(snake);
 		drawGrid(snake);
-		SDL_Delay(425);
+		SDL_Delay(375);
 //		sdlRender(snake);
 	}
 	sdlDestroy(snake);

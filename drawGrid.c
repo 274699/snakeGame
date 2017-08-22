@@ -15,10 +15,9 @@ void		setGrid(t_snake *snake)
 		snake->grid[i][W - 1] = -1;
 		i++;
 	}
-//	int x = rand() % H;
-//	int y = rand() % W;
-//	printf("%d %d\n", x, y);
-//	snake->grid[x][y] = 1;
+	
+//	snake->grid[10][8] = 3;
+
 }
 
 void		setBody(t_snake *snake)
@@ -46,12 +45,7 @@ void		setBody(t_snake *snake)
 		snake->body[3]->y = 10;
 		snake->body[3]->head = 1;
 		
-		snake->body[4] = (t_pos*)malloc(sizeof(t_pos));
-		snake->body[4]->x = 14;
-		snake->body[4]->y = 10;
-		snake->body[4]->head = 1;
-		
-		snake->body[5] = NULL;
+		snake->body[4] = NULL;
 	}
 }
 
@@ -71,6 +65,16 @@ void		drawGrid(t_snake *snake)
 		snake->grid[snake->body[i]->y][snake->body[i]->x] = snake->body[i]->head;
 		i++;
 	}
+	
+	if(snake->pointEated == 1)
+	{
+		snake->point.x = rand() % (W - 3) + 1;
+		snake->point.y = rand() % (H - 3) + 1;
+		snake->grid[snake->point.y][snake->point.x] = 3;
+		snake->pointEated = 0;
+	}
+	else
+		snake->grid[snake->point.y][snake->point.x] = 3;
 	
 
 	rect = (SDL_Rect) {0, 0, 20, 20};
@@ -99,6 +103,13 @@ void		drawGrid(t_snake *snake)
 			{
 				
 				SDL_SetRenderDrawColor(snake->sdl.renderer, 20, 255, 0, 255);
+				SDL_RenderFillRect(snake->sdl.renderer, &rect);
+				SDL_SetRenderDrawColor(snake->sdl.renderer, 50, 50, 50, 255);
+			}
+			else if (snake->grid[j][i] == 3)
+			{
+				
+				SDL_SetRenderDrawColor(snake->sdl.renderer, 0, 0, 255, 255);
 				SDL_RenderFillRect(snake->sdl.renderer, &rect);
 				SDL_SetRenderDrawColor(snake->sdl.renderer, 50, 50, 50, 255);
 			}
