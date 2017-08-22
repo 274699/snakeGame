@@ -62,6 +62,9 @@ void		reDrawUp(t_snake *snake)
 {
 	t_pos	*body0;
 
+//	^
+//	^
+//	^
 	int len = 0;
 	while(snake->body[len])
 		len++;
@@ -77,6 +80,7 @@ void		reDrawUp(t_snake *snake)
 	while(len)
 	{
 		snake->body[len] = snake->body[len - 1];
+		snake->body[len]->head = 1;
 		len--;
 	}
 	snake->body[0] = body0;
@@ -93,6 +97,7 @@ void		reDrawDown(t_snake *snake)
 	body0 = (t_pos*)malloc(sizeof(t_pos));
 	body0->x = snake->body[0]->x;
 	body0->y = snake->body[0]->y + 1;
+	body0->head = 2;
 	if (snake->body[0]->y >= (H - 1))
 		exit (0);
 	len--;
@@ -100,6 +105,7 @@ void		reDrawDown(t_snake *snake)
 	while(len)
 	{
 		snake->body[len] = snake->body[len - 1];
+		snake->body[len]->head = 1;
 		len--;
 	}
 	snake->body[0] = body0;

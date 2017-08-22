@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8A25DD0B1F4ACE4200F6F230 /* initSdl.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A25DD091F4ACE4200F6F230 /* initSdl.c */; };
 		8A25DD0C1F4ACE4200F6F230 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A25DD0A1F4ACE4200F6F230 /* main.c */; };
-		8A25DD101F4ACE5800F6F230 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A25DD0E1F4ACE5800F6F230 /* SDL2_ttf.framework */; };
 		8A25DD111F4ACE5800F6F230 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A25DD0F1F4ACE5800F6F230 /* SDL2.framework */; };
 		8A25DD141F4AD65000F6F230 /* introCountDown.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A25DD131F4AD65000F6F230 /* introCountDown.c */; };
 		8A25DD161F4AD9BE00F6F230 /* drawGrid.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A25DD151F4AD9BE00F6F230 /* drawGrid.c */; };
@@ -31,7 +30,6 @@
 /* Begin PBXFileReference section */
 		8A25DD091F4ACE4200F6F230 /* initSdl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = initSdl.c; sourceTree = "<group>"; };
 		8A25DD0A1F4ACE4200F6F230 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		8A25DD0E1F4ACE5800F6F230 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2_ttf.framework; sourceTree = "<group>"; };
 		8A25DD0F1F4ACE5800F6F230 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2.framework; sourceTree = "<group>"; };
 		8A25DD121F4ACE7100F6F230 /* snake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = snake.h; sourceTree = "<group>"; };
 		8A25DD131F4AD65000F6F230 /* introCountDown.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = introCountDown.c; sourceTree = "<group>"; };
@@ -45,7 +43,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A25DD101F4ACE5800F6F230 /* SDL2_ttf.framework in Frameworks */,
 				8A25DD111F4ACE5800F6F230 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,7 +53,6 @@
 		8A25DD0D1F4ACE5700F6F230 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8A25DD0E1F4ACE5800F6F230 /* SDL2_ttf.framework */,
 				8A25DD0F1F4ACE5800F6F230 /* SDL2.framework */,
 			);
 			name = Frameworks;
