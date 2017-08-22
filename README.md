@@ -21,6 +21,6 @@ $> ./snakeGame
 ![snakeGame](/snake001.png?raw=true "snakeGame")
 
 # Hot Keys:
-  * `UP`, `DOWN` : move along the X-axis
-  * `LEFT`, `RIGHT` : move along the Y-axis
+  * `UP`, `DOWN` : move along the Y-axis
+  * `LEFT`, `RIGHT` : move along the X-axis
   * `SPACE` : Pause
