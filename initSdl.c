@@ -1,12 +1,12 @@
 
 #include "snake.h"
 
-int		snakeCycle(t_snake *snake)
-{
-	
-	
-	return (1);
-}
+//int		snakeCycle(t_snake *snake)
+//{
+//	
+//	
+//	return (1);
+//}
 
 
 
@@ -15,7 +15,6 @@ int		snakeCycle(t_snake *snake)
 void		sdlInit(t_snake *snake)
 {
 	SDL_Init(SDL_INIT_EVERYTHING);
-	TTF_Init();
 	snake->sdl.window = SDL_CreateWindow("FILL ME", 300, 300, WID, HEIG,
 			SDL_WINDOW_OPENGL);
 	snake->sdl.renderer = SDL_CreateRenderer(snake->sdl.window, -1,

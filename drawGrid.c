@@ -28,14 +28,18 @@ void		setBody(t_snake *snake)
 		snake->body[0] = (t_pos*)malloc(sizeof(t_pos));
 		snake->body[0]->x = 12;
 		snake->body[0]->y = 10;
+		snake->body[0]->head = 2;
+
 		
 		snake->body[1] = (t_pos*)malloc(sizeof(t_pos));
 		snake->body[1]->x = 13;
 		snake->body[1]->y = 10;
+		snake->body[1]->head = 1;
 		
 		snake->body[2] = (t_pos*)malloc(sizeof(t_pos));
 		snake->body[2]->x = 14;
 		snake->body[2]->y = 10;
+		snake->body[2]->head = 1;
 		
 		snake->body[3] = NULL;
 	}
@@ -55,7 +59,7 @@ void		drawGrid(t_snake *snake)
 	while(snake->body[i] != NULL)
 	{
 //		printf("i=%d x=%d y=%d \n", i, snake->body[i]->x, snake->body[i]->y);
-		snake->grid[snake->body[i]->y][snake->body[i]->x] = 1;
+		snake->grid[snake->body[i]->y][snake->body[i]->x] = snake->body[i]->head;
 		i++;
 	}
 	
@@ -79,6 +83,13 @@ void		drawGrid(t_snake *snake)
 			{
 				
 				SDL_SetRenderDrawColor(snake->sdl.renderer, 255, 0, 0, 255);
+				SDL_RenderFillRect(snake->sdl.renderer, &rect);
+				SDL_SetRenderDrawColor(snake->sdl.renderer, 50, 50, 50, 255);
+			}
+			else if (snake->grid[j][i] == 2)
+			{
+				
+				SDL_SetRenderDrawColor(snake->sdl.renderer, 20, 255, 0, 255);
 				SDL_RenderFillRect(snake->sdl.renderer, &rect);
 				SDL_SetRenderDrawColor(snake->sdl.renderer, 50, 50, 50, 255);
 			}

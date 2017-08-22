@@ -43,6 +43,21 @@ int		main(void)
 					setGrid(snake);
 					drawGrid(snake);
 				}
+				else if (snake->sdl.e.key.keysym.sym == SDLK_UP)
+				{
+					reDrawUp(snake);
+					sdlRenderClear(snake);
+					setGrid(snake);
+					drawGrid(snake);
+				}
+				else if (snake->sdl.e.key.keysym.sym == SDLK_DOWN)
+				{
+					reDrawDown(snake);
+					sdlRenderClear(snake);
+					setGrid(snake);
+					drawGrid(snake);
+				}
+
 			}
 		}
 		

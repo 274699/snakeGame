@@ -5,7 +5,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <SDL2/SDL.h>
-# include <SDL2_ttf/SDL_ttf.h>
 # define WID 480
 # define HEIG 320
 # define W WID / 20
@@ -16,16 +15,13 @@ typedef struct		s_sdl
 	SDL_Window		*window;
 	SDL_Renderer	*renderer;
 	SDL_Event		e;
-	TTF_Font		*font;
-	SDL_Rect		message_rect;
-	SDL_Surface		*surface_message;
-	SDL_Texture		*message;
 }					t_sdl;
 
 typedef struct		s_pos
 {
 	int				x;
 	int				y;
+	int				head;
 }					t_pos;
 
 typedef struct		s_snake
@@ -47,6 +43,8 @@ void					setGrid(t_snake *snake);
 void					sdlRenderClear(t_snake * snake);
 void					reDrawRight(t_snake *snake);
 void					reDrawLeft(t_snake *snake);
+void					reDrawUp(t_snake *snake);
+void					reDrawDown(t_snake *snake);
 void					setBody(t_snake *snake);
 
 #endif

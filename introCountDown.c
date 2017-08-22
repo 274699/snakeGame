@@ -1,8 +1,8 @@
 
 #include "snake.h"
 
-void		introCountDown(t_snake *snake)
-{
-
-	
-}
+//void		introCountDown(t_snake *snake)
+//{
+//
+//	
+//}
