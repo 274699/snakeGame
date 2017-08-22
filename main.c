@@ -13,9 +13,10 @@ int		main(void)
 	setGrid(snake);
 	setBody(snake);
 	drawGrid(snake);
+	//-- move left by default
+	snake->move = (t_pos){-1, 0, 0};
 	while (!stop)
 	{
-		
 		while (SDL_PollEvent(&(snake->sdl.e)))
 		{
 			if (snake->sdl.e.type == SDL_QUIT || snake->sdl.e.key.keysym.sym == SDLK_ESCAPE)
@@ -29,38 +30,20 @@ int		main(void)
 					drawGrid(snake);
 				}
 				else if (snake->sdl.e.key.keysym.sym == SDLK_RIGHT)
-				{
-
-					reDrawRight(snake);
-					sdlRenderClear(snake);
-					setGrid(snake);
-					drawGrid(snake);
-				}
+					snake->move = (t_pos){1, 0, 0};
 				else if (snake->sdl.e.key.keysym.sym == SDLK_LEFT)
-				{
-					reDrawLeft(snake);
-					sdlRenderClear(snake);
-					setGrid(snake);
-					drawGrid(snake);
-				}
+					snake->move = (t_pos){-1, 0, 0};
 				else if (snake->sdl.e.key.keysym.sym == SDLK_UP)
-				{
-					reDrawUp(snake);
-					sdlRenderClear(snake);
-					setGrid(snake);
-					drawGrid(snake);
-				}
+					snake->move = (t_pos){0, -1, 0};
 				else if (snake->sdl.e.key.keysym.sym == SDLK_DOWN)
-				{
-					reDrawDown(snake);
-					sdlRenderClear(snake);
-					setGrid(snake);
-					drawGrid(snake);
-				}
-
+					snake->move = (t_pos){0, 1, 0};
 			}
 		}
-		
+		reDraw(snake);
+		sdlRenderClear(snake);
+		setGrid(snake);
+		drawGrid(snake);
+		SDL_Delay(425);
 //		sdlRender(snake);
 	}
 	sdlDestroy(snake);

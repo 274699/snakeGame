@@ -68,7 +68,6 @@ void		drawGrid(t_snake *snake)
 	i = 0;
 	while(snake->body[i] != NULL)
 	{
-//		printf("i=%d x=%d y=%d \n", i, snake->body[i]->x, snake->body[i]->y);
 		snake->grid[snake->body[i]->y][snake->body[i]->x] = snake->body[i]->head;
 		i++;
 	}

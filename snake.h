@@ -30,21 +30,19 @@ typedef struct		s_snake
 	int				stop;
 	int				grid[H][W];
 	t_pos			*body[H * W];
-	
+	t_pos			move;
+	t_pos			point;
 }					t_snake;
 
-void					sdlInit(t_snake *snake);
-void					sdlDestroy(t_snake *snake);
-void					sdlRender(t_snake * snake);
-void					introCountDown(t_snake * snake);
-int						snakeCycle(t_snake *snake);
-void					drawGrid(t_snake *snake);
-void					setGrid(t_snake *snake);
-void					sdlRenderClear(t_snake * snake);
-void					reDrawRight(t_snake *snake);
-void					reDrawLeft(t_snake *snake);
-void					reDrawUp(t_snake *snake);
-void					reDrawDown(t_snake *snake);
-void					setBody(t_snake *snake);
+void				sdlInit(t_snake *snake);
+void				sdlDestroy(t_snake *snake);
+void				sdlRender(t_snake * snake);
+void				introCountDown(t_snake * snake);
+int					snakeCycle(t_snake *snake);
+void				drawGrid(t_snake *snake);
+void				setGrid(t_snake *snake);
+void				sdlRenderClear(t_snake * snake);
+void				reDraw(t_snake *snake);
+void				setBody(t_snake *snake);
 
 #endif
