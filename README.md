@@ -1,7 +1,7 @@
 # Project Name : Snake Game
 
 # Info:
-snakeGame is written on C clasic Snake game!
+snakeGame is written on C classic Snake game!
 Snake is the common name for a videogame concept where the player maneuvers a line which grows in length, with the line itself being a primary obstacle.
 
 ![snakeGame](/snake000.png?raw=true "snakeGame")
