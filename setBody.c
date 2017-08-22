@@ -1,7 +1,12 @@
 #include "snake.h"
 
 void		setBody(t_snake *snake)
-{	
+{
+	int i;
+	
+	for (i = 0; i < H * W; i++)
+		snake->body[i] = NULL;
+	
 	snake->body[0] = (t_pos*)malloc(sizeof(t_pos));
 	snake->body[0]->x = 12;
 	snake->body[0]->y = 10;

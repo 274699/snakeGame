@@ -5,6 +5,7 @@ static void	setDefault(t_snake *snake, int *pause, int *stop)
 {
 	snake->move = (t_pos){-1, 0, 0};
 	snake->pointEated = 1;
+	snake->speed = 350;
 	*pause = 0;
 	*stop = 0;
 	sdlInit(snake);
@@ -41,6 +42,8 @@ int		main(void)
 					snake->move = (t_pos){0, -1, 0};
 				else if (snake->sdl.e.key.keysym.sym == SDLK_DOWN)
 					snake->move = (t_pos){0, 1, 0};
+				else if (snake->sdl.e.key.keysym.sym == SDLK_RETURN)
+					snake->speed -= 50;
 			}
 		}
 		if (pause == 0)
@@ -51,7 +54,7 @@ int		main(void)
 				snake->pointEated = 1;
 			setGrid(snake);
 			drawGrid(snake);
-			SDL_Delay(350);
+			SDL_Delay(snake->speed);
 		}
 	}
 	sdlDestroy(snake);
