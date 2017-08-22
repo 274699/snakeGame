@@ -38,12 +38,10 @@ typedef struct		s_snake
 void				sdlInit(t_snake *snake);
 void				sdlDestroy(t_snake *snake);
 void				sdlRender(t_snake * snake);
-void				introCountDown(t_snake * snake);
-int					snakeCycle(t_snake *snake);
 void				drawGrid(t_snake *snake);
 void				setGrid(t_snake *snake);
 void				sdlRenderClear(t_snake * snake);
-void				reDraw(t_snake *snake);
+void				snakeReDraw(t_snake *snake);
 void				setBody(t_snake *snake);
 
 #endif
