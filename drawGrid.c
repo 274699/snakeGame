@@ -41,9 +41,10 @@ void		drawGrid(t_snake *snake)
 	SDL_Rect	rect;
 	int			x;
 	int			y;
+	int			i;
 
 	//set body of snake on map
-	for(int i = 0; snake->body[i] != NULL; i++)
+	for (i = 0; snake->body[i] != NULL; i++)
 		snake->grid[snake->body[i]->y][snake->body[i]->x] = snake->body[i]->head;
 
 	//set a random point on map
