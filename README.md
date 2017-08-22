@@ -7,19 +7,20 @@ Snake is the common name for a videogame concept where the player maneuvers a li
 ![snakeGame](/filler.gif?raw=true "snakeGame")
 
 # The rules of the game:
- - the winner is player who gets biggest board space.
- - the game is over for player if he cant makes an move.
- - piece sent by the Virtual Machine.
- - piece can have any shape and size.
+ - The player loses when the snake runs into the screen border or itself.
 
 # Usage:
-- install/copy frameworks SDL2 and SDL2_ttf to Library/Frameworks/
+- install/copy frameworks SDL2 to Library/Frameworks/
 ```
 $> make sdl2
 $> make
-
 $> ./snakeGame
 ```
 # snakeGame with SDL2 graphic:
 ![snakeGame](/snake000.png?raw=true "snakeGame")
 ![snakeGame](/snake001.png?raw=true "snakeGame")
+
+# Hot Keys:
+  * `UP`, `DOWN` : move along the X-axis
+  * `LEFT`, `RIGHT` : move along the Y-axis
+  * `SPACE` : Pause
