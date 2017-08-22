@@ -4,7 +4,7 @@
 snakeGame is written on C clasic Snake game!
 Snake is the common name for a videogame concept where the player maneuvers a line which grows in length, with the line itself being a primary obstacle.
 
-![snakeGame](/filler.gif?raw=true "snakeGame")
+![snakeGame](/snake000.png?raw=true "snakeGame")
 
 # The rules of the game:
  - The player loses when the snake runs into the screen border or itself.
