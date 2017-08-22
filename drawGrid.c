@@ -65,11 +65,41 @@ void		drawGrid(t_snake *snake)
 		snake->grid[snake->body[i]->y][snake->body[i]->x] = snake->body[i]->head;
 		i++;
 	}
+
 	
 	if(snake->pointEated == 1)
 	{
 		snake->point.x = rand() % (W - 3) + 1;
 		snake->point.y = rand() % (H - 3) + 1;
+		if (snake->grid[snake->point.y][snake->point.x] == 1)
+		{
+			int zeros;
+			zeros = 0;
+				for(int i =0; i < H; i++)
+				{
+					for(int j =0; j < W; j++)
+					{
+						if (snake->grid[i][j] == 0)
+						zeros++;
+					}
+					printf("\n");
+				}
+			if (zeros == 0)
+			{
+				puts("U WIN");
+				exit (0);
+			}
+				
+			
+			while (snake->grid[snake->point.y][snake->point.x] == 1)
+			{
+				snake->point.x = rand() % (W - 3) + 1;
+				snake->point.y = rand() % (H - 3) + 1;
+			}
+		}
+			
+		
+
 		snake->grid[snake->point.y][snake->point.x] = 3;
 		snake->pointEated = 0;
 	}

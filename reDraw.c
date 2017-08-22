@@ -15,15 +15,13 @@ void		reDraw(t_snake *snake)
 		puts("border");
 		exit (0);
 	}
-
 	
-	// ---
-//	if (snake->grid[body0->x][body0->x] != 0)
-//	{
-//		puts("eat yourself");
-//		exit (0);
-//	}
-	
+	if (snake->grid[body0->y][body0->x] == 1)
+	{
+		SDL_Delay(500);
+		puts("eat yourself");
+		exit (0);
+	}
 	
 	len = 0;
 	while(snake->body[len])

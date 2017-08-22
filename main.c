@@ -49,7 +49,7 @@ int		main(void)
 			snake->pointEated = 1;
 		setGrid(snake);
 		drawGrid(snake);
-		SDL_Delay(375);
+		SDL_Delay(350);
 //		sdlRender(snake);
 	}
 	sdlDestroy(snake);
