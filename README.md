@@ -24,3 +24,4 @@ $> ./snakeGame
   * `UP`, `DOWN` : move along the Y-axis
   * `LEFT`, `RIGHT` : move along the X-axis
   * `SPACE` : Pause
+  * `ENTER` : Speed up
