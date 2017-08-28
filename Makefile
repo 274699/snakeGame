@@ -25,3 +25,6 @@ fclean: clean
 	@rm -rf $(NAME)
 	
 re: fclean all
+
+sdl2:
+	@cp -r SDL2.framework ~/Library/Frameworks/
